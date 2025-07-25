@@ -43,6 +43,7 @@
                             <field name="x_bedrooms" />
                             <field name="x_living_area" />
                             <field name="x_facades" />
+                            <field name="x_total_area"/>
                         </group>
                         <group string="Amenities">
                             <field name="x_garage" />
