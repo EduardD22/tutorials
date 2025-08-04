@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- <template id="product_quantity_data" inherit_id="website_sale.product" name="Product Quantity Data">
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="data-webshop-quantity" t-att="product.webshop_quantity"/>
+            <attribute name="data-webshop-minimum-quantity" t-att="product.webshop_minimum_quantity"/>
+        </xpath>
+    </template> -->
+
+     <template id="product_quantity_inherit" inherit_id="website_sale.product_quantity">
+        <xpath expr="//input[@name='add_qty']" position="replace">
+            <input type="text" class="form-control quantity text-center"
+                   style="min-width: 100px;"
+                   t-att-data-webshop-quantity="product.webshop_quantity"
+                   t-att-data-webshop-minimum-quantity="product.webshop_minimum_quantity"
+                   name="add_qty" t-att-value="product.webshop_minimum_quantity"/>
+        </xpath>
+    </template>
+</odoo>
