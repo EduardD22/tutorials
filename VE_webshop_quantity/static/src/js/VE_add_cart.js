@@ -39,7 +39,7 @@ VariantMixin.onClickAddCartJSON = function(ev) {
         }
     } 
     
-    // mark that this was a button click to avoid validation issues
+    // flag
     $input.data('webshop_button_clicked', true);
     
     if (newQty !== previousQty) {
@@ -72,9 +72,9 @@ VariantMixin.onChangeAddQuantity = function(ev) {
     var webshopQuantity = parseInt($input.data('webshop-quantity'));
     var webshopMinimumQuantity = parseInt($input.data('webshop-minimum-quantity'));
     
-    // Only validate if we have webshop configuration
+    // only validate if we have webshop configuration
     if (!webshopQuantity && !webshopMinimumQuantity) {
-        // Call original behavior if available
+        // call original behavior if available
         const $parent = $input.closest('form');
         if ($parent.length > 0) {
             this.triggerVariantChange($parent);
@@ -89,7 +89,7 @@ VariantMixin.onChangeAddQuantity = function(ev) {
     // manual input
     var quantity = parseFloat($input.val() || 0);
    
-    // Validate minimum
+    // validate minimum
     if (quantity < webshopMinimumQuantity) {
         $input.val(webshopMinimumQuantity);
         quantity = webshopMinimumQuantity;
