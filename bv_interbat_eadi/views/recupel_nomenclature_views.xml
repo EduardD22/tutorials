@@ -7,7 +7,7 @@
             <list string="Ecotax Nomenclatures" editable="bottom">
                 <field name="product_id" />
                 <field name="quantity" />
-                <field name="product_template_id" />
+                <field name="nomenclature_id" />
             </list>
         </field>
     </record>
@@ -20,7 +20,7 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="product_template_id" />
+                            <field name="nomenclature_id" />
                             <field name="product_id" />
                             <field name="quantity" />
                         </group>

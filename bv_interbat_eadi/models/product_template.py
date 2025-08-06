@@ -5,7 +5,7 @@ class ProductTemplate(models.Model):
     
     nomenclature_ids = fields.One2many(
         'recupel.nomenclature',
-        'product_template_id',
+        'product_id',
         string='Ecotax Nomenclatures',
         help='BEBAT and RECUPEL ecotaxes for this product'
     )

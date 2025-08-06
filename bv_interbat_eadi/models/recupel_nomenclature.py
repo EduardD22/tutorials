@@ -6,25 +6,19 @@ class RecupelNomenclature(models.Model):
     _description = 'Ecotax Nomenclature Config'
     
     # parent product that contains batteries
-    product_template_id = fields.Many2one(
+    nomenclature_id = fields.Many2one(
         'product.template',
-        string='Product Template',
-        required=True,
-        ondelete='cascade',
-        help='The product that contains batteries requiring ecotax'
+        string='Nomenclature',
     )
     
     product_id = fields.Many2one(
-        'product.product',
+        'product.template',
         string='Ecotax Product',
-        required=True,
-        help='The ecotax product to be added to the order'
     )
     
     quantity = fields.Integer(
-        string='Battery Quantity',
+        string='Quantity',
         default=1,
-        required=True,
         help='Number of batteries in this product package'
     )
     
