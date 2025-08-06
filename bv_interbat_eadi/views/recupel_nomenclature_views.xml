@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_recupel_nomenclature_list" model="ir.ui.view">
+        <field name="name">recupel.nomenclature.list</field>
+        <field name="model">recupel.nomenclature</field>
+        <field name="arch" type="xml">
+            <list string="Ecotax Nomenclatures" editable="bottom">
+                <field name="product_id" />
+                <field name="quantity" />
+                <field name="product_template_id" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_recupel_nomenclature_form" model="ir.ui.view">
+        <field name="name">recupel.nomenclature.form</field>
+        <field name="model">recupel.nomenclature</field>
+        <field name="arch" type="xml">
+            <form string="Ecotax Nomenclature">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="product_template_id" />
+                            <field name="product_id" />
+                            <field name="quantity" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ecotax_products" model="ir.actions.act_window">
+        <field name="name">Ecotax Products</field>
+        <field name="res_model">recupel.nomenclature</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Ecotax Products
+            </p>
+            <p>
+                Create BEBAT and RECUPEL service products that will be automatically
+                added to sales orders based on customer location.
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

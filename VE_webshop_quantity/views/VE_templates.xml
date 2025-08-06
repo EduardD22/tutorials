@@ -9,4 +9,17 @@
                 name="add_qty" t-att-value="product.webshop_minimum_quantity" />
         </xpath>
     </template>
+
+    <template id="cart_lines_inherit" inherit_id="website_sale.cart_lines">
+        <xpath expr="//input[@type='text']" position="replace">
+            <input type="text"
+                class="js_quantity quantity form-control border-start-0 border-end-0"
+                t-att-data-line-id="line.id"
+                t-att-data-product-id="line.product_id.id"
+                t-att-value="line._get_displayed_quantity()"
+                t-att-data-webshop-quantity="line.product_id.webshop_quantity"
+                t-att-data-webshop-minimum-quantity="line.product_id.webshop_minimum_quantity"
+            />
+        </xpath>
+    </template>
 </odoo>

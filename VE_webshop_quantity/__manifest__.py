@@ -7,7 +7,8 @@
     ],
     'assets': {
         'web.assets_frontend': [
-            'VE_webshop_quantity/static/src/js/VE_add_cart.js'
+            'VE_webshop_quantity/static/src/js/VE_add_cart.js',
+            'VE_webshop_quantity/static/src/js/VE_website_sale_add_cart.js'
         ],
     },
     'license': 'OEEL-1',

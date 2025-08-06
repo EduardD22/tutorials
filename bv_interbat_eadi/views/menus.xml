@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_ecotax_config"
+        name="Ecotax Configuration"
+        parent="sale.sale_menu_root"
+        sequence="100" />
+
+    <menuitem id="menu_ecotax_products"
+        name="Ecotax Products"
+        parent="menu_ecotax_config"
+        action="action_ecotax_products"
+        sequence="10" />
+</odoo>
