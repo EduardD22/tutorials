@@ -13,6 +13,9 @@
         <div>
             <Card title="'Amazing Card'" content="'What an amazing content'" />
         </div>
+         <div>
+            <TodoList />
+        </div>
     </t>
 
 </templates>
