@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Run DB",
+            "type": "debugpy",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "odoo-bin",
+            "cwd": "/home/odoo/dev/odoo",
+            "args": [
+                //"cloc",
+                //"--verbose",
+                "--database=testsad",
+                //"--addons-path=${config:odoo.addonsPath}",
+                "--addons-path=addons/,../tutorials/,../psbe-custom",
+                //"--init=cmoviedo_attendances",
+                "--limit-time-cpu=0",
+                "--limit-time-real=0",
+                "--dev=all",
+                //"--test-tags=:TestClass.test_function",
+            ]
+        }
+    ]
+}
