@@ -12,7 +12,7 @@
                 //"--verbose",
                 "--database=testsad",
                 //"--addons-path=${config:odoo.addonsPath}",
-                "--addons-path=addons/,../tutorials/,../psbe-custom",
+                "--addons-path=addons/,../tutorials/,../psbe-custom/,../enterprise",
                 //"--init=cmoviedo_attendances",
                 "--limit-time-cpu=0",
                 "--limit-time-real=0",

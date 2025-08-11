@@ -8,7 +8,9 @@
         'views/recupel_nomenclature_views.xml',
         'views/res_partner_views.xml',
         'views/menus.xml',
-        'views/product_category_views.xml'
+        'views/product_category_views.xml',
+        'reports/report_account_move_line.xml',
+        'reports/report_sale_order_document_ecotax.xml'
     ],
     'license': 'OEEL-1',
     'category': 'Customizations',
