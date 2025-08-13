@@ -11,7 +11,14 @@
            
         </div>
         <div>
-            <Card title="'Amazing Card'" content="'What an amazing content'" />
+            <Card>
+                <t t-set-slot="title">
+                  Amazing Card from the slot
+                </t>
+                <t t-set-slot="content">
+                 From the slot
+                </t>
+            </Card>
         </div>
          <div>
             <TodoList />

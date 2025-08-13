@@ -4,9 +4,9 @@
     <t t-name="awesome_owl.todolist">
         <div class="p-3">
            <h1>Todolist</h1>
-           <input placeholder="Enter a task" />
+           <input t-ref="input" t-on-keyup="addTodo" placeholder="Enter a new todo" />
            <p t-foreach="todos" t-as="todo" t-key="todo.id">
-           <TodoItem todo="todo" />
+           <TodoItem todo="todo" toggleState="(id) => this.onChange(id)" removeTodo="(id) => this.removeTodo(id)"/>
            </p>
         </div>
     </t>

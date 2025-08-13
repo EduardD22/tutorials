@@ -3,8 +3,10 @@
 
     <t t-name="awesome_owl.todoitem">
         <div class="p-3" t-att-class="{'text-muted': props.todo.isCompleted === true, 'text-decoration-line-through': props.todo.isCompleted === true }">
-          <!-- <t t-out="props.todo.id"/> -->
+          <input class="m-2" type="checkbox" t-att-id="props.todo.id" t-att-checked="props.todo.isCompleted" t-on-change="onChange"/>
+          <t t-out="props.todo.id"/><span>.</span>
           <t t-out="props.todo.description"/>
+          <span class="fa fa-remove m-2" t-on-click="onClickRemove"/>
         <!--   <t t-out="props.todo.isCompleted"/> -->
         </div>
     </t>
