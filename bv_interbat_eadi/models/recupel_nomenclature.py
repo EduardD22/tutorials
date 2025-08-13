@@ -5,7 +5,6 @@ class RecupelNomenclature(models.Model):
     _name = 'recupel.nomenclature'
     _description = 'Ecotax Nomenclature Config'
     
-    # parent product that contains batteries
     nomenclature_id = fields.Many2one(
         'product.template',
         string='Nomenclature',

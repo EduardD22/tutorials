@@ -11,18 +11,10 @@ class ResPartner(models.Model):
     
     def _should_apply_bebat(self):
         self.ensure_one()
-        belgium = self.env.ref('base.be', raise_if_not_found=False)
-        if not belgium:
-            return False
-        
-        is_belgian = self.country_id == belgium
+        is_belgian = self.country_id.code == 'BE'
         # applying bebat if belgian and field not checked
         return is_belgian and not self.bebat_exemption
     
     def _should_apply_recupel(self):
         self.ensure_one()
-        belgium = self.env.ref('base.be', raise_if_not_found=False)
-        if not belgium:
-            return False
-        
-        return self.country_id == belgium
+        return self.country_id.code == 'BE'
